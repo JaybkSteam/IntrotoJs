@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="my_paragraph">It was I Dio</p>
+
+    <button onclick="changeStyle()">Click Me</button>
+
+    <hr>
+    <p>This button counts when you click it</p>
+    <button onclick="addCounter()"id="counter_button">0</button>
+    <input id="my_input">
+    <button id="input_button"onclick="inputButton()">click me</button>
+    <hr>
+    <input id ="secret_password">
+    <button id="input_button" onclick="secretButton()">Put the secret password </button>
+    <hr>
+    <script lang="js">
+
+
+
+
+        console.log("Hello World")
+
+        
+
+        document.write("<h1>This is from javascript</h1>")
+        document.write("Welcome to my JavaScript Website")
+
+        function changestyle () {
+            let myParagraph = document.getElementById("my_paragraph")
+            myParagraph.innerHTML = 'This was modified by JavaScript'
+            myParagraph.style = 'background: red; color: cyan'
+            alert("You cliked a button!")
+        }
+
+        let counter = 0
+        
+        function addCounter (){
+            counter = counter + 1
+            let counterButton = document.getElementById("counter_button")
+            counterButton.innerHTML = counter
+        }
+
+
+        function inputButton (){
+            let myInput = document.getElementById("my_input")
+
+            console.log(myInput.value)
+
+        }
+
+        function secretButton (){
+            let secretPassword = document.getElementById("secret_Password")
+            window.location ='https://www.youtube.com/watch?v=SC6s6ATi90s'
+        }
+
+
+
+
+
+
+
+    </script>
+</body>
+</html>
