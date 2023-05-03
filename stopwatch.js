@@ -46,21 +46,27 @@ function start () {
 function stop () {
     clearInterval(interval)
     startButton.disabled = false
+    let laps = document.getElementById('my list')
 
     alert("You clicked the Stop Button")
     
 }
+let laps = document.getElementById('Laps')
 function reset (){
     stop()
     seconds = 0
     milliseconds = 0
     minutes = 0
     digits.innerHTML = String(minutes).padStart(2, '0') + '.' + milliseconds
+    myList.innerHTML = ""
     
     alert("You clicked the reset button")
 
 }
-
-function lap() {
+function addLap(){
+    const node = document.createElement("Li")
     
- }
+    node.textContent = String(minutes).padStart(2, '0') + '.' + milliseconds
+
+    document.getElementById("myList").appendChild(node);
+}
